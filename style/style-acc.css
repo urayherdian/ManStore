@@ -1,0 +1,240 @@
+:root {
+    --color-1 : rgb(231,251,244);
+    --color-2 : rgb(53,170,143);
+    --color-3 : rgb(39,57,89);
+
+    --color-con : rgb(243,111,80);
+}
+
+.container#acc {
+    border: 1px grey solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.container#acc .head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    text-align: center;
+}
+
+.container#acc .head .head-title {
+    font-weight: bolder;
+    font-family: sans-serif;
+    font-size: larger;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.container#acc .head .head-title.active {
+    border-bottom: solid 5px var(--color-con);
+}
+
+.container#acc .head .head-title.active a {
+    color: var(--color-con);
+}
+
+.container#acc .body {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-column-gap: 10px;
+}
+
+.container#acc .body .photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 5px grey;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container#acc img.photo-img {
+    width: 300px;
+    width: calc(100% - 50px);
+    height: 300px;
+    height: calc(100% - 50px);
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.container#acc .body .biodata {
+    font-size: larger;
+    padding: 25px;
+    position: relative;
+}
+
+.container#acc .body .biodata label {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 25%;
+}
+
+.container#acc .body .biodata .subtitle {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.container#acc .body .biodata .address {
+    position: relative;
+    font-family: sans-serif;
+    text-align: left;
+    border: 2px solid var(--color-con);
+    background-color: rgb(243, 204, 196);
+    border-radius: 10px;
+    width: calc(100% - 50px);
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.container#acc .body .biodata .address .nama-penerima {
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+label.button-file {
+    background: var(--color-2);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 50px);
+    border: 1px var(--color-3) solid;
+    text-align: center;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.button, .button-icon {
+    background-color: var(--color-2);
+    border: 1px var(--color-3) solid;
+    padding: 5px;
+    width: calc(100% - 50px);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.button-icon {
+    width: max-content;
+}
+
+.button-icon.danger {
+    background-color: red;
+    color: white;
+}
+
+.button:hover, label.button-file:hover, .button-icon:hover {
+    background-color: var(--color-con);
+}
+
+/* Input */
+form input {
+    all: unset;
+}
+
+.input-text {
+    border-bottom: 2px solid var(--color-2);
+    width: 40%;
+    transition: .5s;
+    color: var(--color-2);
+}
+
+.input-text:focus {
+    border-bottom: 2px solid var(--color-con);
+    color: var(--color-con);
+}
+
+input[type='submit'] {
+    background-color: var(--color-2);
+    border: 1px var(--color-3) solid;
+    padding: 5px;
+    width: calc(100% - 50px);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+input[type='submit']:hover {
+    background-color: var(--color-con);
+}
+
+/* modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 80%;
+    height: 80%;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal .modal-content .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* alert */
+.success {
+    text-align: center;
+    color: green;
+    border: solid 2px green;
+    width: calc(100% - 50px);
+    background-color: rgb(188, 236, 188);
+    border-radius: 5px;
+}
+
+.warning {
+    text-align: center;
+    color: orange;
+    border: solid 2px orange;
+    width: calc(100% - 50px);
+    background-color: rgb(233, 233, 190);
+    border-radius: 5px;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    border: solid 2px red;
+    width: calc(100% - 50px);
+    background-color: rgb(240, 206, 206);
+    border-radius: 5px;
+}
+
+/* position */
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}

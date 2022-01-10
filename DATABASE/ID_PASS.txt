@@ -1,0 +1,3 @@
+Database : urayherd_admin
+Users : urayherd_manhek
+Pass : manhek*123
